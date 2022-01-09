@@ -12,6 +12,6 @@ namespace Design_Patterns_Assignment.Observer.SubjectFiles
         List<IObserver> Observers { get; set; }
         void RegisterObserver(IObserver observer);
         void UnRegisterObserver(IObserver observer);
-        void notifyObservers();
+        void notifyObservers(string message);
     }
 }

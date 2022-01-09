@@ -8,11 +8,10 @@ namespace Design_Patterns_Assignment.Observer.ObserverFiles
 {
     public class MailBoxWatcher : IMailBoxWatcher
     {
-        MailBox Email = new MailBox();
-
-        public void Update()
+        
+        public void Update(string message)
         {
-            Email.CreateTimer();
+            Console.WriteLine(message);
         }
     }
 }

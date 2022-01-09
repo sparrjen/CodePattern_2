@@ -31,7 +31,7 @@ namespace Design_Patterns_Assignment
                 // Get User Input
                 char userInput = Console.ReadKey(true).KeyChar;
 
-                var dataRepository = new SimulatedDatabase();
+                var dataRepository = new DataRepository();
                 string data = dataRepository.Load("Dataset A");
                 string customer = "";
                 string animal = "";

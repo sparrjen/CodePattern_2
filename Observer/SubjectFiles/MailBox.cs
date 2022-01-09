@@ -16,11 +16,11 @@ namespace Design_Patterns_Assignment
             Observers = new List< IObserver >();
         }
 
-        public void notifyObservers()
+        public void notifyObservers(string message)
         {
             foreach (var observer in Observers)
             {
-                observer.Update();
+                observer.Update(message);
             }
         }
 
@@ -48,13 +48,14 @@ namespace Design_Patterns_Assignment
             Console.WriteLine("Press the Enter key to exit the program at any time... ");
             Console.ReadLine();
 
-            notifyObservers();
+            
 
         }
 
         public void HandleTimerElapsed(object sender, ElapsedEventArgs e)
         {
-            Console.WriteLine("You have a new mail", e.SignalTime);
+            string message = "You have a new email";
+            notifyObservers(message);
         }
     }
 }
